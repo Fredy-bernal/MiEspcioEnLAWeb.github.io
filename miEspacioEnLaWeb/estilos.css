@@ -1,0 +1,394 @@
+/* Barra de navegación */
+
+/* Estilo para los títulos */
+h1 {
+    font-family: cursive; /* Tipografía sans-serif */
+    font-size: 35px; /* Tamaño de la letra para el título */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+h2 {
+    color: #3e2723; /* Color de texto oscuro */
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+img[src="Imagenes/yo.png"] {
+    animation: moverArribaAbajo 2s infinite alternate; /* Animación de arriba hacia abajo */
+}
+
+@keyframes moverArribaAbajo {
+    0% {
+        transform: translateY(0); /* Sin desplazamiento */
+    }
+    100% {
+        transform: translateY(20px); /* Desplazamiento hacia abajo */
+    }
+}
+
+
+#barraSuperior {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#barraSuperior h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000000;
+    font-size: 25px;
+}
+
+#barraSuperior img {
+    max-width: 15%;
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+#barraSuperior h1 img {
+    margin-left: 5px; /* Espacio entre la imagen y el texto */
+    max-height: 100px; /* Ajusta la altura máxima de la imagen */
+}
+
+#barraSuperiorNavegacion ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#barraSuperiorNavegacion ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+#barraSuperiorNavegacion ul li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Color de texto */
+    font-size: 20px;
+}
+
+#barraSuperiorNavegacion ul li a:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Banner principal*/
+
+#bannerPrincipal {
+    display: flex; /* Utilizamos flexbox para organizar los elementos */
+    background-image: url('Imagenes/Fondo1.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* La imagen de fondo cubrirá toda la sección */
+    background-position: center; /* La imagen se posicionará en el centro de la sección */
+    color: #000000; /* Color del texto, para asegurarte de que sea legible */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center;
+    position: relative; /* Ajusta el contexto de apilamiento */
+    z-index: -1; /* Coloca la imagen de fondo detrás de todo lo demás */
+}
+
+#bannerPrincipal div {
+    flex: 1; /* El texto ocupará todo el espacio restante */
+}
+#bannerPrincipal h2 {
+    font-size: 40px; /* Tamaño de la letra para el título */
+    margin-bottom: 40px; /* Mueve el título hacia arriba */
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px; /* Espacio inferior entre el título y el párrafo */
+}
+
+#tituloBannerPrincipal{
+   
+    position: relative; /* Establece la posición relativa para que pueda ser movido */
+    top: 20px; /* Mueve el título hacia abajo */
+    left: 30px; /* Mueve el título hacia la derecha */
+}
+
+#bannerPrincipal p {
+    font-size: 16px; /* Tamaño de la letra para el párrafo */
+    font-size: 25px;
+}
+
+#bannerPrincipal img {
+    width: 200px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-left: auto; /* Mueve la imagen a la derecha */
+    border-radius: 50%; /* Bordes redondeados para una imagen circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Primer sección del main */
+
+#actividades {
+    display: flex; /* Utilizamos flexbox para organizar los elementos */
+    flex-direction: row; /* Organizamos las secciones en una fila */
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: center; /* Centramos horizontalmente los elementos */
+    position: relative; /* Posicionamiento relativo para posicionar el título */
+    background-color: #4D869C;
+    /*background-image: url('imagenes/Fondo2.jpeg');*/
+    background-size: cover; /* La imagen de fondo cubrirá toda el artículo */
+    color: #070707; /* Color del texto, para asegurarte de que sea legible */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#tituloActividades {
+    position: absolute; /* Posicionamiento absoluto para posicionar el título */
+    top: 10%; /* Lo posiciona en el 50% de la altura del contenedor padre */
+    left: 50%; /* Lo posiciona en el 50% del ancho del contenedor padre */
+    transform: translate(-50%, -50%); /* Centra el título tanto horizontal como verticalmente */
+    text-align: center; /* Centra el texto */
+}
+
+#grupoUnoActividades, #grupoDosActividades {
+    flex: 1; /* Las secciones ocuparán el mismo espacio */
+    margin-top: 150px; /* Espacio entre el título y la primera sección */
+    font-size: 25px; /* Tamaño de la letra */
+   
+}
+
+#grupoUnoActividades, #grupoDosActividades p {
+    margin: 0px; /* Eliminamos el margen por defecto de los párrafos */
+    
+}
+
+#grupoUnoActividades {
+    margin-bottom:-150px; /* Espacio entre las dos secciones */
+}
+
+/* Segunda sección del main */
+
+#posibilidadesEmpleo {
+    display: flex; /* Utilizamos flexbox para organizar los elementos */
+    flex-direction: row; /* Organizamos las secciones en una fila */
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: center; /* Centramos horizontalmente los elementos */
+    position: relative; /* Posicionamiento relativo para posicionar el título */
+    color: #070707; /* Color del texto, para asegurarte de que sea legible */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: #EEF7FF;
+    /*background-image: url('imagenes/Fondo3.jpeg');*/
+    background-size: cover; /* La imagen de fondo cubrirá toda el artículo */
+    background-position: center; /* La imagen de fondo se posicionará centrada */
+}
+
+#tituloEmpleo {
+    text-align: center; /* Centra horizontalmente el contenido del artículo */
+    position: absolute; /* Posicionamiento absoluto para posicionar el título */
+    top: 10%; /* Lo posiciona en el 50% de la altura del contenedor padre */
+    left: 50%; /* Lo posiciona en el 50% del ancho del contenedor padre */
+    transform: translate(-50%, -50%); /* Centra el título tanto horizontal como verticalmente */
+    z-index: 2; /* Asegura que el título esté por encima de los elementos h3 */
+}
+
+#nacional, #internacional {
+    display: inline-block; /* Permite que las secciones se alineen horizontalmente */
+    vertical-align: top; /* Alinea las secciones al principio */
+    width: 45%; /* Ajusta el ancho de las secciones */
+    margin-top: 200px; /* Espacio entre el título y la primera sección */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 25px; /* Tamaño de letra de 25px para las secciones */
+}
+
+#internacional {
+    margin-top: 150px; /* Ajusta el margen superior para que el texto esté dentro de la imagen de fondo */
+    margin-bottom: -110px; /* Espacio entre las dos secciones */
+}
+
+#nacional h3, #internacional h3 {
+    margin-top: 0; /* Asegura que no haya espacio entre el título y los elementos h3 */
+    margin-bottom: 20px; /* Espacio entre los elementos h3 y los párrafos */
+    text-align: center; /* Centra horizontalmente los títulos h3 */
+}
+
+/* Sección tres del main */
+
+#similitudesDiferencias {
+    text-align: center; /* Centra horizontalmente el contenido */
+    background-color: #CDE8E5;
+    /*background-image: url('imagenes/Fondo4.jpeg');*/
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.descripcion {
+    font-size: 25px; /* Tamaño del texto de la descripción */
+    margin-bottom: 30px; /* Espacio inferior entre la descripción y las secciones */
+    text-align: left; /* Alinea la descripción a la izquierda */
+}
+
+#similitudes, #diferencias {
+    display: inline-block; /* Permite que las secciones se muestren en línea */
+    vertical-align: top; /* Alinea las secciones en la parte superior */
+    width: 45%; /* Ancho de las secciones */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 20px; /* Espacio superior entre las secciones */
+    font-size: 25px;
+}
+
+h3 {
+    text-align: center; /* Centra horizontalmente los títulos de las secciones */
+}
+
+ul {
+    list-style-type: disc; /* Utiliza puntos como marcadores de lista */
+    margin-left: 20px; /* Espacio a la izquierda de la lista */
+}
+
+/* Sección cuatro del main */
+
+#innovacionDesafios {
+    background-color: #7AB2B2;
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+.descripcion {
+    /*background-image: url('ruta/a/tu/imagen.jpg'); */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    padding: 20px; /* Ajusta el espaciado interno según sea necesario */
+    text-align: left; /* Alinea la descripción a la izquierda */
+    margin-bottom: 30px; /* Espaciado inferior entre la descripción y las secciones */
+}
+
+#factorInnovador, #desafios {
+    background-color: #7AB2B2;
+    display: inline-block; /* Permite que las secciones se muestren en línea */
+    vertical-align: top; /* Alinea las secciones en la parte superior */
+    width: 45%; /* Ancho de las secciones */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 20px; /* Espaciado superior entre las secciones */
+    font-size: 25px;
+}
+
+/* Footer */
+
+#enlacesRedes ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#enlacesRedes ul li {
+    margin-right: 10px; /* Espacio entre los elementos */
+}
+
+#enlacesRedes ul li img {
+    width: 40px; /* Tamaño fijo para los logos */
+    height: auto; /* Altura ajustada automáticamente */
+}
+
+#enlacesRedes ul li a {
+    display: flex; /* Para alinear el texto y el icono en la misma línea */
+    align-items: center; /* Alinear verticalmente */
+}
+
+#enlacesRedes ul li a img {
+    margin-right: 5px; /* Espacio entre el logo y el texto */
+}
+
+#enlacesRedes ul li a span {
+    text-align: right; /* Alinear el texto a la derecha */
+}
+
+/* FORO Y CONTACTO */
+
+#name {
+    width: 100%;
+    font-size: 20px; /* Tamaño de fuente más grande */
+    padding: 10px; /* Aumentar el espacio alrededor del texto */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+#comment {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px; /* Espaciado inferior entre comentarios */
+}
+
+#comment:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#comment-form button[type="submit"] {
+    padding: 15px 25px; /* Ajusta el padding para hacer el botón más grande */
+    font-size: 20px; /* Tamaño de letra más grande */
+    background-color: #264b2f; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Quita el borde */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para los comentarios pares */
+.comment:nth-child(even) {
+    background-color: #b9b5b5; /* Color de fondo gris claro */
+}
+
+/* Estilo para los comentarios impares */
+.comment:nth-child(odd) {
+    background-color: #fff; /* Color de fondo blanco */
+}
+
+#comments-container .comment {
+    border: 1px solid #ccc;
+    border-radius: 80px; /* Forma ovalada */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+#foroContacto {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px; /* Ajusta el espacio debajo del separador */
+    background-color: #98885c; /* Color de fondo más oscuro */
+    color: #070707; /* Color de texto blanco para mayor contraste */
+    font-size: 25px;
+    border-radius: 10%;
+}
+
+#foroContacto h2 {
+    text-align: center;
+}
+
+#copyright,
+#redesSociales {
+    margin-top: 20px; /* Ajusta el espacio encima del separador */
+    padding-top: 20px; /* Ajusta el espacio arriba del separador */
+    border-top: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
